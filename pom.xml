@@ -19,6 +19,7 @@
     <modules>
         <module>spring-framework-di</module>
         <module>spring-framework-profile</module>
+        <module>spring-framework-beanlifecycle</module>
     </modules>
 
     <properties>
