@@ -1,14 +1,13 @@
-package ppa.spring.springframeworkdi.controllers;
+package ppa.spring.springframeworkprofile.controllers;
 
 import org.springframework.stereotype.Controller;
 import ppa.spring.springframeworkdi.services.GreetingService;
 
 @Controller
-public class SimpleController {
-
+public class I18nController {
     private final GreetingService greetingService;
 
-    public SimpleController(GreetingService greetingService) {
+    public I18nController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
