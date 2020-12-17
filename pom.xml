@@ -20,6 +20,11 @@
         <module>spring-framework-di</module>
         <module>spring-framework-profile</module>
         <module>spring-framework-beanlifecycle</module>
+        <module>spring-framework-transaction</module>
+        <module>spring-framework-simplewebapp</module>
+        <module>spring-framework-scheduler</module>
+        <module>spring-framework-controlleradvice</module>
+        <module>learning-tools</module>
     </modules>
 
     <properties>
@@ -53,5 +58,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
