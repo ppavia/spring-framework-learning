@@ -35,8 +35,8 @@ public class DataSourceProxyConfig implements BeanPostProcessor {
 
     @Override
     public Object postProcessAfterInitialization(final Object bean, final String beanName) throws BeansException {
-        logger.info("PPA : {}", () -> beanName);
         if (bean instanceof DataSource) {
+            logger.info("PPA : {}", () -> beanName);
             ProxyFactory factory = new ProxyFactory(bean);
             factory.setProxyTargetClass(true);
             factory.addAdvice(new ProxyDataSourceInterceptor((DataSource) bean));
@@ -58,8 +58,8 @@ public class DataSourceProxyConfig implements BeanPostProcessor {
                     .create(dataSource)
                     .countQuery()
                     .multiline()
-//                    .listener(listener)
-//                    .logQueryToSysOut()
+                    .listener(listener)
+                    .logQueryToSysOut()
                     .logQueryBySlf4j(SLF4JLogLevel.DEBUG)
                     .asJson()
                     .build();
