@@ -1,7 +1,7 @@
 package ppa.spring.domain.bean;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

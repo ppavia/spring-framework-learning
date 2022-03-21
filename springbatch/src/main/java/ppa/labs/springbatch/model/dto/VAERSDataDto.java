@@ -1,12 +1,9 @@
-package ppa.labs.springbatch.model;
-
-import org.springframework.data.annotation.Id;
+package ppa.labs.springbatch.model.dto;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class VAERSData implements Serializable {
-    @Id
+public class VAERSDataDto implements Serializable {
     private long id;
 
     private LocalDate dtRecv;
@@ -77,42 +74,42 @@ public class VAERSData implements Serializable {
 
     private String allergies;
 
-    public VAERSData(
+    public VAERSDataDto(
             long id
-        ,LocalDate dtRecv
-        ,String state
-        ,float ageYears
-        ,int cageYear
-        ,int cageMonth
-        ,String sex
-        ,LocalDate dtRp
-        ,String symptom
-        ,String died
-        ,LocalDate dtDied
-        ,String threat
-        ,String erVisit
-        ,String hospital
-        ,int hospitalDays
-        ,String xStay
-        ,String disable
-        ,String recovd
-        ,LocalDate dtVax
-        ,LocalDate dtOnset
-        ,int numDays
-        ,String labData
-        ,String vAdminBy
-        ,String vFundBy
-        ,String otherMeds
-        ,String curIll
-        ,String history
-        ,String priorVax
-        ,String spltType
-        ,String fromVers
-        ,LocalDate dtTodays
-        ,LocalDate birthEffect
-        ,String ofcVisit
-        ,String erEdVisit
-        ,String allergies) {
+            ,LocalDate dtRecv
+            ,String state
+            ,float ageYears
+            ,int cageYear
+            ,int cageMonth
+            ,String sex
+            ,LocalDate dtRp
+            ,String symptom
+            ,String died
+            ,LocalDate dtDied
+            ,String threat
+            ,String erVisit
+            ,String hospital
+            ,int hospitalDays
+            ,String xStay
+            ,String disable
+            ,String recovd
+            ,LocalDate dtVax
+            ,LocalDate dtOnset
+            ,int numDays
+            ,String labData
+            ,String vAdminBy
+            ,String vFundBy
+            ,String otherMeds
+            ,String curIll
+            ,String history
+            ,String priorVax
+            ,String spltType
+            ,String fromVers
+            ,LocalDate dtTodays
+            ,LocalDate birthEffect
+            ,String ofcVisit
+            ,String erEdVisit
+            ,String allergies) {
         this.id = id;
         this.dtRecv = dtRecv;
         this.state = state;

@@ -1,6 +1,10 @@
 package ppa.spring.domain.bean;
 
-import javax.persistence.*;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.ManyToOne;
+
 import java.util.Objects;
 
 @Entity
