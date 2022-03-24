@@ -26,6 +26,7 @@
         <module>spring-framework-controlleradvice</module>
         <module>learning-tools</module>
         <module>spring-data-access</module>
+        <module>spring-pagination</module>
     </modules>
 
     <properties>

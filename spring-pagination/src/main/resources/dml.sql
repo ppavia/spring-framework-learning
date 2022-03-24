@@ -1,0 +1,1 @@
+insert into person values ("Jon", "Doe");
