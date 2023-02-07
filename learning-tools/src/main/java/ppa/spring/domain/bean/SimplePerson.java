@@ -1,22 +1,31 @@
 package ppa.spring.domain.bean;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "SIMPLEPERSON")
 public class SimplePerson {
+
+    @Column(name = "FIRSTNAME")
     private String firstName;
+
+    @Column(name = "LASTNAME")
     private String lastName;
     @Id
     @GeneratedValue
-    private int id;
+    private long id;
 
     public SimplePerson(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public SimplePerson(Long id) {
+        this.id = id;
+    }
+
+    public SimplePerson() {
+
     }
 
     public String getFirstName() {
@@ -35,11 +44,11 @@ public class SimplePerson {
         this.lastName = lastName;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

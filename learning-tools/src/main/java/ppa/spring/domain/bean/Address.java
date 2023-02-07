@@ -16,7 +16,7 @@ public class Address extends Location {
     private String zipCode;
     private String city;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
     private Person person;
 
     public Person getPerson() {
