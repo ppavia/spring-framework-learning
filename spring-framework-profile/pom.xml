@@ -17,7 +17,8 @@
         <dependency>
             <groupId>ppa.spring</groupId>
             <artifactId>spring-framework-di</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+
 </project>

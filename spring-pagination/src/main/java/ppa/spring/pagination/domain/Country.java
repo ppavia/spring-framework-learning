@@ -1,6 +1,6 @@
 package ppa.spring.pagination.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "COUNTRY")

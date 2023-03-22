@@ -17,6 +17,7 @@
 
 
     <modules>
+        <module>learning-tools</module>
         <module>spring-framework-di</module>
         <module>spring-framework-profile</module>
         <module>spring-framework-beanlifecycle</module>
@@ -24,36 +25,32 @@
         <module>spring-framework-simplewebapp</module>
         <module>spring-framework-scheduler</module>
         <module>spring-framework-controlleradvice</module>
-        <module>learning-tools</module>
         <module>spring-data-access</module>
         <module>spring-pagination</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-framework-learning.version>0.0.1-SNAPSHOT</spring-framework-learning.version>
+        <net.ttddyy.version>1.8.1</net.ttddyy.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ppa.spring</groupId>
+                <artifactId>spring-framework-di</artifactId>
+                <version>${spring-framework-learning.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 

@@ -1,5 +1,7 @@
 package ppa.spring.springframework.beanlifecycle.services;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.*;
@@ -8,9 +10,6 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.instrument.classloading.LoadTimeWeaver;
 import org.springframework.stereotype.Service;
 import ppa.spring.springframework.beanlifecycle.processor.BeanLifecycle;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Service("beanLifecycleGreetingService")
 @BeanLifecycle

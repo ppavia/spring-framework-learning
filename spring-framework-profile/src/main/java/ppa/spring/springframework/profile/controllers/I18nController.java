@@ -3,7 +3,6 @@ package ppa.spring.springframework.profile.controllers;
 import org.springframework.stereotype.Controller;
 import ppa.spring.springframework.di.services.GreetingService;
 
-
 @Controller
 public class I18nController {
     private final GreetingService greetingService;

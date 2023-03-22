@@ -1,5 +1,6 @@
 package ppa.spring.transaction;
 
+import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -7,13 +8,12 @@ import ppa.spring.domain.bean.Address;
 import ppa.spring.domain.bean.Person;
 import ppa.spring.repository.PersonRepository;
 
-import javax.annotation.Resource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest(properties = {"trace-sql.enabled=true"})
-@ActiveProfiles("dev")
+@ActiveProfiles("test")
 //@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
 public class PersonRepositoryTest {
     @Resource
