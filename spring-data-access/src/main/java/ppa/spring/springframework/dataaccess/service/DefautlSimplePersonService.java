@@ -1,6 +1,7 @@
 package ppa.spring.springframework.dataaccess.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ppa.spring.domain.bean.SimplePerson;
 import ppa.spring.springframework.dataaccess.exception.ServiceException;
 import ppa.spring.springframework.dataaccess.model.dto.SimplePersonDto;
@@ -35,6 +36,8 @@ public class DefautlSimplePersonService implements SimplePersonService {
 
         return mapSimplePerson(simplePerson);
     }
+
+    @Transactional
     @Override public List<SimplePersonDto> getSimplePersons(String firstName) throws ServiceException {
         List<SimplePerson> simplePersons = simplePersonRepository.findByFirstName(firstName);
         return simplePersons.stream()

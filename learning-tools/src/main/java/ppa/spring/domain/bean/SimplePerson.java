@@ -12,7 +12,7 @@ public class SimplePerson {
     @Column(name = "LASTNAME")
     private String lastName;
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     public SimplePerson(String firstName, String lastName) {
