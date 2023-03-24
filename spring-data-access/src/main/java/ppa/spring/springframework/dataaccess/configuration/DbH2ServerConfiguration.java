@@ -34,12 +34,8 @@ import java.util.Properties;
 public class DbH2ServerConfiguration {
     @PostConstruct
     public void postContruct() {
-        Assert.isTrue(StringUtils.isNotBlank(databaseUrl), "db.url property is not set");
-        Assert.isTrue(StringUtils.isNotBlank(defaultcmroc) && defaultcmroc.matches("^\\d{4}$"), "default.cmroc property is not set");
+        Assert.isTrue(!StringUtils.isNotBlank(databaseUrl), "db.url property is not set");
     }
-
-    @Value("${default.cmroc}")
-    private String defaultcmroc;
 
     @Value("${spring.datasource.driver-class-name}")
     private String driver;
@@ -108,8 +104,8 @@ public class DbH2ServerConfiguration {
     public JpaVendorAdapter jpaVendorAdapter() {
         HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         jpaVendorAdapter.setDatabase(Database.H2);
-        jpaVendorAdapter.setGenerateDdl(false);
-        jpaVendorAdapter.setShowSql(false);
+        jpaVendorAdapter.setGenerateDdl(true);
+        jpaVendorAdapter.setShowSql(true);
         return jpaVendorAdapter;
     }
 }

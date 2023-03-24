@@ -1,0 +1,2432 @@
+2023-02-09 13:57:34,028 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 23620 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 13:57:34,037 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 13:57:34,038 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 13:57:35,054 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 13:57:35,160 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interfaces.
+2023-02-09 13:57:36,412 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 13:57:36,429 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 13:57:36,430 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 13:57:36,430 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 13:57:36,585 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 13:57:36,586 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2447 ms
+2023-02-09 13:57:36,633 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 13:57:36,728 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 13:57:37,029 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 13:57:37,032 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 13:57:37,052 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 13:57:37,226 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 13:57:37,345 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 13:57:37,636 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 13:57:37,878 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 13:57:38,223 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:7, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 13:57:39,155 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 13:57:39,156 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 13:57:39,157 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 13:57:39,157 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 13:57:39,158 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 13:57:39,159 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 13:57:39,159 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 13:57:39,160 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 13:57:39,168 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 13:57:39,169 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 13:57:39,170 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 13:57:39,171 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 13:57:39,181 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:9, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 13:57:39,183 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 13:57:39,184 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 13:57:39,187 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 13:57:39,194 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 13:57:39,198 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 13:57:39,219 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 13:57:39,675 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 13:57:40,078 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 13:57:40,079 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 13:57:40,086 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 13:57:40,087 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 13:57:40,088 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 13:57:40,089 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 13:57:40,089 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 13:57:40,133 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 13:57:40,166 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-09 13:57:40,176 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 7.317 seconds (process running for 9.707)
+2023-02-09 13:58:37,610 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-6] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 13:58:37,611 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-6] Initializing Servlet 'dispatcherServlet'
+2023-02-09 13:58:37,612 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-6] Completed initialization in 1 ms
+2023-02-09 13:59:21,214 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-9] 
+Name:, Connection:10, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(titi,tutu)]
+2023-02-09 13:59:21,220 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-9] la personne [titi,tutu] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [titi,tutu] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 14:00:02,112 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-5] 
+Name:, Connection:11, Time:0, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,Vergnaud)]
+2023-02-09 14:01:47,267 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-8] 
+Name:, Connection:12, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,Vergnaud)]
+2023-02-09 14:06:33,204 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-9] 
+Name:, Connection:13, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 14:06:34,621 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-9] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 14:06:56,307 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 14:06:56,308 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 14:06:56,528 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:23, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 14:06:56,544 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 14:06:56,546 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 14:06:56,549 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 14:06:56,549 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 14:06:56,550 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 14:06:56,551 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 14:06:56,552 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:14, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 14:06:56,557 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 14:06:56,568 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 14:19:31,758 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 26144 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 14:19:31,761 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 14:19:31,762 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 14:19:32,591 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 14:19:32,681 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interfaces.
+2023-02-09 14:19:33,964 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 14:19:33,983 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 14:19:33,984 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 14:19:33,985 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 14:19:34,155 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 14:19:34,155 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2318 ms
+2023-02-09 14:19:34,212 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 14:19:34,305 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 14:19:34,648 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 14:19:34,652 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 14:19:34,684 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 14:19:34,883 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 14:19:34,970 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 14:19:35,209 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 14:19:35,432 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 14:19:35,765 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:6, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 14:19:36,678 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 14:19:36,679 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 14:19:36,680 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 14:19:36,680 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 14:19:36,681 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 14:19:36,682 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 14:19:36,682 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 14:19:36,682 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 14:19:36,692 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:4, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 14:19:36,692 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 14:19:36,693 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 14:19:36,694 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 14:19:36,700 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:5, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 14:19:36,701 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 14:19:36,702 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 14:19:36,704 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 14:19:36,713 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:8, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 14:19:36,717 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 14:19:36,731 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 14:19:37,261 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 14:19:37,672 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 14:19:37,673 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 14:19:37,678 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:3, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 14:19:37,679 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 14:19:37,680 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 14:19:37,680 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 14:19:37,681 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 14:19:37,736 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 14:19:37,767 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 14:19:37,777 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 6.943 seconds (process running for 8.499)
+2023-02-09 14:20:09,064 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 14:20:09,064 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-02-09 14:20:09,065 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-02-09 14:20:12,208 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-2] 
+Name:, Connection:10, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 14:20:12,213 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-2] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 14:20:25,560 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 14:20:25,561 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 14:20:25,742 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 14:20:25,742 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 14:20:25,743 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 14:20:25,743 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 14:20:25,744 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 14:20:25,744 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 14:20:25,745 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 14:20:25,745 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 14:20:25,747 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 14:20:25,756 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 14:29:03,118 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 25708 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 14:29:03,120 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 14:29:03,122 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 14:29:03,955 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 14:29:04,048 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interfaces.
+2023-02-09 14:29:05,278 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 14:29:05,294 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 14:29:05,295 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 14:29:05,296 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 14:29:05,458 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 14:29:05,459 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2246 ms
+2023-02-09 14:29:05,516 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 14:29:05,616 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 14:29:05,947 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 14:29:05,951 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 14:29:05,975 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 14:29:06,185 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 14:29:06,297 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 14:29:06,540 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 14:29:06,739 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 14:29:07,069 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:6, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 14:29:07,893 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 14:29:07,893 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 14:29:07,894 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 14:29:07,894 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 14:29:07,895 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 14:29:07,895 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 14:29:07,896 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 14:29:07,896 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 14:29:07,905 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 14:29:07,906 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 14:29:07,906 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 14:29:07,907 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 14:29:07,913 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:5, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 14:29:07,915 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 14:29:07,916 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 14:29:07,917 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 14:29:07,925 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 14:29:07,929 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 14:29:07,943 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 14:29:08,440 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 14:29:08,773 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 14:29:08,774 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 14:29:08,779 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:3, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 14:29:08,779 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 14:29:08,780 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 14:29:08,781 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 14:29:08,782 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 14:29:08,825 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 14:29:08,861 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 14:29:08,873 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 6.654 seconds (process running for 8.162)
+2023-02-09 14:29:18,827 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 14:29:18,827 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-02-09 14:29:18,828 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-02-09 14:29:21,726 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-1] 
+Name:, Connection:10, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 14:29:21,731 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-1] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 14:31:24,162 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m18s97ms759µs700ns).
+2023-02-09 14:33:09,149 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 14:33:09,152 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 14:33:09,529 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:3, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 14:33:09,606 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 14:33:09,607 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 14:33:09,655 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 14:33:09,655 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 14:33:09,656 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 14:33:09,656 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 14:33:09,657 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 14:33:09,659 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 14:33:09,668 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 14:33:18,974 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 7968 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 14:33:18,977 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 14:33:18,978 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 14:33:19,871 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 14:33:19,961 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+2023-02-09 14:33:21,174 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 14:33:21,189 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 14:33:21,190 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 14:33:21,190 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 14:33:21,350 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 14:33:21,351 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2270 ms
+2023-02-09 14:33:21,401 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 14:33:21,492 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 14:33:21,834 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 14:33:21,836 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 14:33:21,857 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 14:33:21,999 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 14:33:22,086 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 14:33:22,298 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 14:33:22,482 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 14:33:22,823 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:7, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 14:33:23,696 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 14:33:23,697 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 14:33:23,697 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 14:33:23,699 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 14:33:23,701 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 14:33:23,701 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 14:33:23,702 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 14:33:23,702 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 14:33:23,710 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 14:33:23,711 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 14:33:23,712 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 14:33:23,713 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 14:33:23,720 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 14:33:23,721 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 14:33:23,722 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 14:33:23,724 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 14:33:23,732 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 14:33:23,736 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 14:33:23,751 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 14:33:24,254 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 14:33:24,595 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 14:33:24,596 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 14:33:24,602 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:4, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 14:33:24,602 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 14:33:24,604 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 14:33:24,604 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 14:33:24,605 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 14:33:24,651 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 14:33:24,689 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 14:33:24,700 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 6.628 seconds (process running for 8.171)
+2023-02-09 14:33:26,738 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 14:33:26,739 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-02-09 14:33:26,740 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-02-09 14:33:31,545 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-1] 
+Name:, Connection:10, Time:2, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 14:33:31,556 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-1] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 14:33:35,789 WARN o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [http-nio-8080-exec-1] Failure in @ExceptionHandler ppa.lab.spring.springserverwww.exception.RestResponseEntityExceptionHandler#handleHttpException(RestException, WebRequest)
+java.lang.ClassCastException: class org.springframework.web.context.request.ServletWebRequest cannot be cast to class org.springframework.http.server.ServerHttpRequest (org.springframework.web.context.request.ServletWebRequest and org.springframework.http.server.ServerHttpRequest are in unnamed module of loader 'app')
+	at buildErrorResponse(RestResponseEntityExceptionHandler.java:35)
+	at ppa.lab.spring.springserverwww.exception.RestResponseEntityExceptionHandler.handleHttpException(RestResponseEntityExceptionHandler.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:413)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:74)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1340)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 14:33:35,792 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [/servermock] threw exception [Request processing failed: ppa.lab.spring.springserverwww.exception.RestException: la personne [Adrien,jik] n'a pas été trouvée.] with root cause
+ppa.lab.spring.springserverwww.exception.RestException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 15:50:08,005 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 15:50:08,019 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 15:50:08,094 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 15:50:08,095 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 15:50:08,096 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 15:50:08,097 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 15:50:08,099 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 15:50:08,101 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 15:50:08,103 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 15:50:08,103 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 15:50:08,114 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 15:50:08,123 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 17:18:49,550 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 5192 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 17:18:49,553 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 17:18:49,555 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 17:18:50,582 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 17:18:50,686 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2023-02-09 17:18:52,098 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 17:18:52,117 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:18:52,118 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 17:18:52,119 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 17:18:52,266 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 17:18:52,267 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2574 ms
+2023-02-09 17:18:52,306 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 17:18:52,428 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 17:18:52,777 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 17:18:52,780 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 17:18:52,800 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 17:18:52,982 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 17:18:53,133 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 17:18:53,427 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 17:18:53,689 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 17:18:54,102 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:7, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 17:18:55,087 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:18:55,087 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:18:55,088 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:18:55,089 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:18:55,090 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:18:55,091 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:18:55,091 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:18:55,092 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:18:55,103 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:4, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:18:55,104 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:18:55,105 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:18:55,106 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:18:55,113 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:6, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 17:18:55,114 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 17:18:55,116 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:18:55,118 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:18:55,126 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:8, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 17:18:55,131 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 17:18:55,152 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:18:55,764 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 17:18:56,203 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 17:18:56,205 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 17:18:56,211 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:4, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 17:18:56,212 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 17:18:56,213 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 17:18:56,214 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 17:18:56,215 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 17:18:56,266 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:18:56,314 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 17:18:56,330 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 7.852 seconds (process running for 10.071)
+2023-02-09 17:20:18,656 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 17:20:18,657 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-02-09 17:20:18,659 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-02-09 17:20:23,022 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-1] 
+Name:, Connection:10, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 17:20:26,347 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-1] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:25:07,950 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m45s28ms970µs500ns).
+2023-02-09 17:25:07,957 WARN o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [http-nio-8080-exec-1] Failure in @ExceptionHandler ppa.lab.spring.springserverwww.exception.RestResponseEntityExceptionHandler#handleHttpException(RestException, WebRequest)
+java.lang.ClassCastException: class org.springframework.web.context.request.ServletWebRequest cannot be cast to class org.springframework.http.server.ServerHttpRequest (org.springframework.web.context.request.ServletWebRequest and org.springframework.http.server.ServerHttpRequest are in unnamed module of loader 'app')
+	at buildErrorResponse(RestResponseEntityExceptionHandler.java:35)
+	at ppa.lab.spring.springserverwww.exception.RestResponseEntityExceptionHandler.handleHttpException(RestResponseEntityExceptionHandler.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:413)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:74)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1340)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1151)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:25:07,965 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [/servermock] threw exception [Request processing failed: ppa.lab.spring.springserverwww.exception.RestException: la personne [Adrien,jik] n'a pas été trouvée.] with root cause
+ppa.lab.spring.springserverwww.exception.RestException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:25:08,096 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:25:08,097 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 17:25:08,099 WARN o.s.b.f.s.DisposableBeanAdapter [SpringApplicationShutdownHook] Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.reflect.UndeclaredThrowableException
+2023-02-09 17:25:08,099 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 17:25:08,102 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 17:35:19,284 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 13868 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 17:35:19,288 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 17:35:19,289 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 17:35:20,096 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 17:35:20,187 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
+2023-02-09 17:35:21,434 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 17:35:21,448 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:35:21,450 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 17:35:21,451 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 17:35:21,600 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 17:35:21,603 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2235 ms
+2023-02-09 17:35:21,651 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 17:35:21,768 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 17:35:22,057 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 17:35:22,060 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 17:35:22,080 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 17:35:22,221 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 17:35:22,310 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 17:35:22,517 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 17:35:22,706 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 17:35:23,046 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:6, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 17:35:23,846 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:35:23,847 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:35:23,847 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:35:23,848 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:35:23,849 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:35:23,850 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:35:23,850 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:35:23,850 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:35:23,860 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:35:23,861 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:35:23,861 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:35:23,862 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:35:23,869 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:6, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 17:35:23,870 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 17:35:23,872 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:35:23,873 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:35:23,881 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 17:35:23,884 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 17:35:23,897 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:35:24,374 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 17:35:24,703 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 17:35:24,706 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 17:35:24,710 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 17:35:24,711 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 17:35:24,712 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 17:35:24,713 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 17:35:24,714 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 17:35:24,754 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:35:24,784 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 17:35:24,793 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 6.384 seconds (process running for 7.949)
+2023-02-09 17:36:26,681 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 17:36:26,682 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-02-09 17:36:26,684 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-02-09 17:36:29,941 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-2] 
+Name:, Connection:10, Time:0, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 17:36:29,946 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-2] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:37:56,734 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-4] 
+Name:, Connection:11, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 17:37:58,553 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-4] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:40:22,503 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m51s390ms239µs201ns).
+2023-02-09 17:40:31,130 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-3] 
+Name:, Connection:12, Time:0, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 17:40:31,439 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-3] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:41:45,388 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:41:45,389 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 17:41:45,563 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:41:45,564 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:41:45,564 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:41:45,565 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:41:45,565 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:41:45,565 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:41:45,566 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:41:45,566 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:13, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:41:45,568 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 17:41:45,576 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 17:42:18,476 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 24204 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 17:42:18,479 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 17:42:18,481 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 17:42:19,330 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 17:42:19,424 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
+2023-02-09 17:42:20,642 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 17:42:20,660 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:42:20,662 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 17:42:20,662 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 17:42:20,825 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 17:42:20,826 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2250 ms
+2023-02-09 17:42:20,881 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 17:42:20,977 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 17:42:21,387 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 17:42:21,391 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 17:42:21,423 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 17:42:21,634 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 17:42:21,745 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 17:42:22,084 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 17:42:22,382 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 17:42:22,875 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:10, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 17:42:23,978 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:42:23,979 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:42:23,979 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:42:23,980 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:42:23,981 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:42:23,982 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:42:23,982 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:42:23,983 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:42:23,994 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:3, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:42:23,995 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:42:23,996 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:42:23,998 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:42:24,005 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 17:42:24,007 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 17:42:24,008 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:42:24,010 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:42:24,019 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:8, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 17:42:24,024 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 17:42:24,038 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:42:24,562 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 17:42:24,939 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 17:42:24,940 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 17:42:24,945 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:3, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 17:42:24,946 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 17:42:24,947 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 17:42:24,948 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 17:42:24,949 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 17:42:25,001 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:42:25,038 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 17:42:25,053 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 7.496 seconds (process running for 8.854)
+2023-02-09 17:43:16,714 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 17:43:16,716 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-02-09 17:43:16,720 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-02-09 17:43:19,401 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-1] 
+Name:, Connection:10, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 17:43:19,988 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-1] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:44:17,842 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:44:17,843 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 17:44:18,017 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:44:18,018 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:44:18,019 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:44:18,020 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:44:18,022 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:44:18,023 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:44:18,024 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:44:18,025 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:11, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:44:18,029 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 17:44:18,043 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-09 17:44:29,221 INFO p.l.s.s.SpringServerwwwApplication [main] Starting SpringServerwwwApplication using Java 17.0.4.1 with PID 29600 (C:\DEV\workspaces\ws-tuto\spring-serverwww\target\classes started by ppavia in C:\DEV\workspaces\ws-tuto\spring-framework-learning)
+2023-02-09 17:44:29,224 DEBUG p.l.s.s.SpringServerwwwApplication [main] Running with Spring Boot v3.0.2, Spring v6.0.4
+2023-02-09 17:44:29,225 INFO p.l.s.s.SpringServerwwwApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-09 17:44:30,040 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-09 17:44:30,130 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+2023-02-09 17:44:31,342 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-09 17:44:31,357 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:44:31,360 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-02-09 17:44:31,361 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-09 17:44:31,510 INFO o.a.c.c.C.[.[.[/servermock] [main] Initializing Spring embedded WebApplicationContext
+2023-02-09 17:44:31,511 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2210 ms
+2023-02-09 17:44:31,563 DEBUG p.l.s.s.c.DatasourceProxyConfig [main] DEBUGGING DATA SOURCE : dataSource
+2023-02-09 17:44:31,664 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-09 17:44:31,950 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:learningtools user=SA
+2023-02-09 17:44:31,953 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-09 17:44:31,973 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:learningtools'
+2023-02-09 17:44:32,110 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-09 17:44:32,197 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-09 17:44:32,450 WARN o.h.o.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-09 17:44:32,634 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-02-09 17:44:32,956 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:3, Time:6, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select * from INFORMATION_SCHEMA.SEQUENCES"]
+Params:[()]
+2023-02-09 17:44:33,771 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:44:33,771 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:44:33,772 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:44:33,772 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:44:33,773 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:44:33,773 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:44:33,774 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:44:33,774 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:4, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:44:33,783 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:2, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence country_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:44:33,784 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_location start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:44:33,785 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence seq_person start with 1 increment by 5"]
+Params:[]
+2023-02-09 17:44:33,785 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create sequence simpleperson_seq start with 1 increment by 50"]
+Params:[]
+2023-02-09 17:44:33,791 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:5, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table country (id integer not null, name varchar(255), population integer not null, primary key (id))"]
+Params:[]
+2023-02-09 17:44:33,792 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table location (type_address varchar(31) not null, id bigint not null, name varchar(255), city varchar(255), complement_street varchar(255), name_street varchar(255), num_street varchar(255), zip_code varchar(255), person_id bigint, primary key (id))"]
+Params:[]
+2023-02-09 17:44:33,794 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table person (id bigint not null, age integer not null, first_name varchar(255), last_name varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:44:33,795 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["create table simpleperson (id bigint not null, firstname varchar(255), lastname varchar(255), primary key (id))"]
+Params:[]
+2023-02-09 17:44:33,803 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:5, Time:7, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["alter table if exists location add constraint FKnqvqp27xjm0an6tg3qja6ti8b foreign key (person_id) references person"]
+Params:[]
+2023-02-09 17:44:33,807 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-09 17:44:33,821 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:44:34,270 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-09 17:44:34,606 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE SCHEMA IF NOT EXISTS learningtools"]
+Params:[]
+2023-02-09 17:44:34,607 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:7, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["CREATE TABLE IF NOT EXISTS SIMPLEPERSON ( id NUMBER(10) not null constraint id_sp primary key, firstName VARCHAR2(50) not null, lastName VARCHAR2(50) not null )"]
+Params:[]
+2023-02-09 17:44:34,612 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:3, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (1, 'Gérard', 'Bouchard')"]
+Params:[]
+2023-02-09 17:44:34,613 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:1, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (2, 'Adrien', 'Vergnaud')"]
+Params:[]
+2023-02-09 17:44:34,614 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (3, 'Basile', 'Bouduris')"]
+Params:[]
+2023-02-09 17:44:34,614 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (4, 'Eugénie', 'Grandet')"]
+Params:[]
+2023-02-09 17:44:34,615 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [main] 
+Name:, Connection:9, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["INSERT INTO SIMPLEPERSON (id, firstName, lastName) VALUES (5, 'Ophélie', 'Winter')"]
+Params:[]
+2023-02-09 17:44:34,656 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-02-09 17:44:34,695 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/servermock'
+2023-02-09 17:44:34,705 INFO p.l.s.s.SpringServerwwwApplication [main] Started SpringServerwwwApplication in 6.397 seconds (process running for 7.973)
+2023-02-09 17:45:05,336 INFO o.a.c.c.C.[.[.[/servermock] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-09 17:45:05,337 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-02-09 17:45:05,338 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-02-09 17:45:08,414 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-2] 
+Name:, Connection:10, Time:0, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,jik)]
+2023-02-09 17:45:09,170 ERROR p.l.s.s.c.PersonController [http-nio-8080-exec-2] la personne [Adrien,jik] n'a pas été trouvée.
+ppa.lab.spring.springserverwww.exception.ServiceException: la personne [Adrien,jik] n'a pas été trouvée.
+	at ppa.lab.spring.springserverwww.service.DefautlSimplePersonService.getSimplePerson(DefautlSimplePersonService.java:32)
+	at ppa.lab.spring.springserverwww.controller.PersonController.person(PersonController.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-09 17:45:28,383 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [http-nio-8080-exec-1] 
+Name:, Connection:11, Time:1, Success:True
+Type:Prepared, Batch:False, QuerySize:1, BatchSize:0
+Query:["select s1_0.id,s1_0.firstname,s1_0.lastname from simpleperson s1_0 where s1_0.firstname=? and s1_0.lastname=?"]
+Params:[(Adrien,Vergnaud)]
+2023-02-09 17:49:18,135 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-09 17:49:18,136 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-02-09 17:49:18,315 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists country cascade "]
+Params:[]
+2023-02-09 17:49:18,315 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists location cascade "]
+Params:[]
+2023-02-09 17:49:18,316 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists person cascade "]
+Params:[]
+2023-02-09 17:49:18,317 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop table if exists simpleperson cascade "]
+Params:[]
+2023-02-09 17:49:18,317 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists country_seq"]
+Params:[]
+2023-02-09 17:49:18,317 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_location"]
+Params:[]
+2023-02-09 17:49:18,318 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists seq_person"]
+Params:[]
+2023-02-09 17:49:18,318 DEBUG n.t.d.l.l.SLF4JQueryLoggingListener [SpringApplicationShutdownHook] 
+Name:, Connection:12, Time:0, Success:True
+Type:Statement, Batch:False, QuerySize:1, BatchSize:0
+Query:["drop sequence if exists simpleperson_seq"]
+Params:[]
+2023-02-09 17:49:18,320 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-09 17:49:18,327 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
