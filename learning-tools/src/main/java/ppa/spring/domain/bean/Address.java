@@ -19,6 +19,18 @@ public class Address extends Location {
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
     private Person person;
 
+    public Address(String nameStreet, String complementStreet, String numStreet, String zipCode, String city, Person person) {
+        this.nameStreet = nameStreet;
+        this.complementStreet = complementStreet;
+        this.numStreet = numStreet;
+        this.zipCode = zipCode;
+        this.city = city;
+        this.person = person;
+    }
+
+    public Address() {
+    }
+
     public Person getPerson() {
         return person;
     }
