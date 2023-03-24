@@ -49,7 +49,7 @@ public class DbConfiguration {
         final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSourceAdapter);
         entityManagerFactory.setPackagesToScan("ppa.spring.domain.bean");
-        entityManagerFactory.setPersistenceUnitName("learningtools");
+        entityManagerFactory.setPersistenceUnitName("learning");
         entityManagerFactory.setJpaProperties(hibernateProperties);
         entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
         return entityManagerFactory;

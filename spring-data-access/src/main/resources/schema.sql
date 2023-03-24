@@ -1,5 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS learningtools;
+-- CREATE SCHEMA IF NOT EXISTS learningtools;
 
+drop table if exists SIMPLEPERSON;
 CREATE TABLE IF NOT EXISTS SIMPLEPERSON
 (
     id    bigint auto_increment
