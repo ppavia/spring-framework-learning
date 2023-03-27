@@ -70,7 +70,7 @@ public class DbH2ServerConfiguration {
         final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSourceAdapter);
         entityManagerFactory.setPackagesToScan("ppa.spring.domain.bean");
-        entityManagerFactory.setPersistenceUnitName("learning");
+        entityManagerFactory.setPersistenceUnitName("spring-data");
         entityManagerFactory.setJpaProperties(hibernateProperties);
         entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
         return entityManagerFactory;
