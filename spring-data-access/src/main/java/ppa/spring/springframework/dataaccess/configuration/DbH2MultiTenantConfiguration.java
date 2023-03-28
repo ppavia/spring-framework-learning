@@ -71,7 +71,6 @@ public class DbH2MultiTenantConfiguration implements ApplicationContextAware {
                     String prefix = "spring.datasource.%s.".formatted(tenantId);
                     String txName = "txManager%s".formatted(tenantId);
 
-
                 DataSource targetDataSource = targetDataSource(tenantProperties.getProperty(prefix + "driver-class-name"), tenantProperties.getProperty(prefix + "url"));
                 UserCredentialsDataSourceAdapter dataSource = dataSource(tenantProperties.getProperty(prefix + "username"), tenantProperties.getProperty(prefix + "password"), targetDataSource);
                 LocalContainerEntityManagerFactoryBean entityManagerFactory = entityManagerFactory(dataSource, hibernateProperties(), jpaVendorAdapter(), "db-%s".formatted(tenantId));

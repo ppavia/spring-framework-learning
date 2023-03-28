@@ -39,6 +39,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>net.ttddyy</groupId>
+                <artifactId>datasource-proxy</artifactId>
+                <version>${net.ttddyy.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>ppa.spring</groupId>
                 <artifactId>spring-framework-di</artifactId>
                 <version>${spring-framework-learning.version}</version>
