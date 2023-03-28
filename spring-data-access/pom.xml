@@ -12,6 +12,8 @@
     <artifactId>spring-data-access</artifactId>
 
     <properties>
+        <java-custom-utils.version>1.0.0</java-custom-utils.version>
+        <learning-tools.version>1.0-SNAPSHOT</learning-tools.version>
     </properties>
 
     <dependencies>
@@ -40,16 +42,21 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>ppa.spring</groupId>
-            <version>1.0-SNAPSHOT</version>
-            <artifactId>learning-tools</artifactId>
-        </dependency>
         <dependency>
             <groupId>net.ttddyy</groupId>
             <artifactId>datasource-proxy</artifactId>
             <version>1.8.1</version>
+        </dependency>
+
+        <!-- customs dependencies -->
+        <!-- ********************************************************** -->
+        <dependency>
+            <groupId>fr.assia.lib</groupId>
+            <artifactId>java-custom-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ppa.spring</groupId>
+            <artifactId>learning-tools</artifactId>
         </dependency>
     </dependencies>
 

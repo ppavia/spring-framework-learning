@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource({"classpath:persistence.properties"})
 @EntityScan(basePackages = {"ppa.spring.domain.bean"})
+@PropertySource({"classpath:persistence.properties"})
 @ComponentScan({"ppa.spring.springframework.dataaccess.configuration"})
 public class DataAccessConfiguration {
 }

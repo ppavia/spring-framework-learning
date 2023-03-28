@@ -32,6 +32,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-framework-learning.version>0.0.1-SNAPSHOT</spring-framework-learning.version>
+        <java-custom-utils.version>1.0.0</java-custom-utils.version>
+        <learning-tools.version>1.0-SNAPSHOT</learning-tools.version>
         <net.ttddyy.version>1.8.1</net.ttddyy.version>
     </properties>
     <dependencyManagement>
@@ -40,6 +42,16 @@
                 <groupId>ppa.spring</groupId>
                 <artifactId>spring-framework-di</artifactId>
                 <version>${spring-framework-learning.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.assia.lib</groupId>
+                <artifactId>java-custom-utils</artifactId>
+                <version>${java-custom-utils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ppa.spring</groupId>
+                <artifactId>learning-tools</artifactId>
+                <version>${learning-tools.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

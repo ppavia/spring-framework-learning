@@ -1,5 +1,6 @@
 package ppa.spring.springframework.dataaccess.configuration;
 
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import ppa.spring.springframework.dataaccess.utils.StringUtils;
 import jakarta.annotation.PostConstruct;
@@ -26,6 +27,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
+@PropertySource({"classpath:h2server.properties"})
 @ConditionalOnProperty(
         value = "db.h2.server.enabled",
         havingValue = "true",
