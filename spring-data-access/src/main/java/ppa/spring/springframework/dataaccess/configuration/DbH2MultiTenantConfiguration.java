@@ -65,11 +65,10 @@ public class DbH2MultiTenantConfiguration implements ApplicationContextAware {
                 Properties tenantProperties = new Properties();
                 DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
 
-
-                    tenantProperties.load(new FileInputStream(propertyFile));
-                    String tenantId = tenantProperties.getProperty("name");
-                    String prefix = "spring.datasource.%s.".formatted(tenantId);
-                    String txName = "txManager%s".formatted(tenantId);
+                tenantProperties.load(new FileInputStream(propertyFile));
+                String tenantId = tenantProperties.getProperty("name");
+                String prefix = "spring.datasource.%s.".formatted(tenantId);
+                String txName = "txManager%s".formatted(StringUtils.toUpperCaseFirstChar(tenantId));
 
                 DataSource targetDataSource = targetDataSource(tenantProperties.getProperty(prefix + "driver-class-name"), tenantProperties.getProperty(prefix + "url"));
                 UserCredentialsDataSourceAdapter dataSource = dataSource(tenantProperties.getProperty(prefix + "username"), tenantProperties.getProperty(prefix + "password"), targetDataSource);
