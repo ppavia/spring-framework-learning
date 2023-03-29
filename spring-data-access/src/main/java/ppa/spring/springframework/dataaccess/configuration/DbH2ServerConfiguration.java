@@ -1,8 +1,8 @@
 package ppa.spring.springframework.dataaccess.configuration;
 
+import fr.assia.javacustomutils.string.StringUtils;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import ppa.spring.springframework.dataaccess.utils.StringUtils;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,8 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.UserCredentialsDataSourceAdapter;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -36,7 +34,7 @@ import java.util.Properties;
 public class DbH2ServerConfiguration {
     @PostConstruct
     public void postContruct() {
-        Assert.isTrue(!StringUtils.isNotBlank(databaseUrl), "db.url property is not set");
+        Assert.isTrue(!StringUtils.isBlank(databaseUrl), "db.url property is not set");
     }
 
     @Value("${spring.datasource.driver-class-name}")

@@ -4,10 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ppa.spring.springframework.dataaccess.exception.RestException;
 import ppa.spring.springframework.dataaccess.exception.ServiceException;
 import ppa.spring.springframework.dataaccess.model.dto.RestResponse;
@@ -73,5 +70,20 @@ public class PersonController {
     @GetMapping("/400")
     public ResponseEntity<Void> noPerson() throws RestException {
         throw new RestException("a bad request", HttpStatus.NOT_FOUND);
+    }
+
+    @PutMapping (value = "/"
+            , consumes = MediaType.APPLICATION_JSON_VALUE
+            , produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<RestResponse<SimplePersonDto>> createNewPerson(
+            HttpServletRequest request
+            , @RequestBody SimplePersonDto simplePersonDto
+    )  throws RestException {
+        try {
+            simplePersonDto = simplePersonService.addSimplePerson(simplePersonDto, request.getHeader("X-TenantID"));
+        } catch (ServiceException e) {
+            throw new RestException(e.getMessage(), HttpStatus.NOT_FOUND, e);
+        }
+        return HttpResponseUtil.buildRestResponse(simplePersonDto, HttpStatus.OK.name(), request.getRequestURI());
     }
 }

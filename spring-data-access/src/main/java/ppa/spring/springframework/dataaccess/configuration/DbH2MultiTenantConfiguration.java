@@ -1,5 +1,6 @@
 package ppa.spring.springframework.dataaccess.configuration;
 
+import fr.assia.javacustomutils.string.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -22,7 +23,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import ppa.spring.springframework.dataaccess.model.multitenant.MultitenantDataSource;
-import ppa.spring.springframework.dataaccess.utils.StringUtils;
 
 import javax.sql.DataSource;
 import java.io.File;
@@ -48,37 +48,23 @@ public class DbH2MultiTenantConfiguration implements ApplicationContextAware {
 
     private GenericApplicationContext applicationContext;
 
-    @Value("${defaultTenant}")
-    private String defaultTenant;
-
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource dataSource() {
-
+    @Bean("targetDataSources")
+    public Map<Object, Object> targetDataSources () {
         Map<Object, Object> resolvedDataSources = new HashMap<>();
         try {
             URI tenantPropertiesFolder = ClassLoader.getSystemResource(TENANT_PATH).toURI();
             File[] files = Paths.get(tenantPropertiesFolder).toFile().listFiles();
             for (File propertyFile : files) {
                 Properties tenantProperties = new Properties();
-                DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
 
                 tenantProperties.load(new FileInputStream(propertyFile));
                 String tenantId = tenantProperties.getProperty("name");
                 String prefix = "spring.datasource.%s.".formatted(tenantId);
-                String txName = "txManager%s".formatted(StringUtils.toUpperCaseFirstChar(tenantId));
 
                 DataSource targetDataSource = targetDataSource(tenantProperties.getProperty(prefix + "driver-class-name"), tenantProperties.getProperty(prefix + "url"));
                 UserCredentialsDataSourceAdapter dataSource = dataSource(tenantProperties.getProperty(prefix + "username"), tenantProperties.getProperty(prefix + "password"), targetDataSource);
-                LocalContainerEntityManagerFactoryBean entityManagerFactory = entityManagerFactory(dataSource, hibernateProperties(), jpaVendorAdapter(), "db-%s".formatted(tenantId));
-                PlatformTransactionManager transactionManager = transactionManager(entityManagerFactory);
 
-                this.applicationContext.registerBean("", DataSource.class, targetDataSource);
-                this.applicationContext.registerBean("", UserCredentialsDataSourceAdapter.class, dataSource);
-                this.applicationContext.registerBean("", LocalContainerEntityManagerFactoryBean.class, entityManagerFactory);
-                this.applicationContext.registerBean("", PlatformTransactionManager.class, transactionManager);
-
-                resolvedDataSources.put(tenantId, dataSourceBuilder.build());
+                resolvedDataSources.put(tenantId, dataSource);
 
             }
         } catch (IOException e) {
@@ -86,52 +72,22 @@ public class DbH2MultiTenantConfiguration implements ApplicationContextAware {
         } catch (URISyntaxException e) {
             throw new RuntimeException("Problème in properties folder: %s".formatted(e.getMessage()), e);
         }
+        return resolvedDataSources;
+    }
 
-        AbstractRoutingDataSource dataSource = new MultitenantDataSource();
-        dataSource.setDefaultTargetDataSource(resolvedDataSources.get(defaultTenant));
-        dataSource.setTargetDataSources(resolvedDataSources);
+    @Value("${defaultTenant}")
+    private String defaultTenant;
+
+    @Bean
+    @ConfigurationProperties(prefix = "spring.datasource")
+    public MultitenantDataSource dataSource() {
+
+        MultitenantDataSource dataSource = new MultitenantDataSource();
+        dataSource.setTargetDataSources(targetDataSources());
+        dataSource.setDefaultTargetDataSource(targetDataSources().get(defaultTenant));
+        dataSource.setTargetDataSources(targetDataSources());
 
         dataSource.afterPropertiesSet();
-        return dataSource;
-    }
-
-    @Override public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = (GenericApplicationContext) applicationContext;
-    }
-
-    public PlatformTransactionManager transactionManager(LocalContainerEntityManagerFactoryBean entityManagerFactory ) {
-        JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(entityManagerFactory.getObject());
-        transactionManager.setJpaDialect(new HibernateJpaDialect());
-        return transactionManager;
-    }
-
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
-            DataSource dataSourceAdapter
-            , Properties hibernateProperties
-            , JpaVendorAdapter jpaVendorAdapter
-            , String persistenceUnitName
-    ) {
-        final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-        entityManagerFactory.setDataSource(dataSourceAdapter);
-        entityManagerFactory.setPackagesToScan("ppa.spring.domain.bean");
-        entityManagerFactory.setPersistenceUnitName(persistenceUnitName);
-        entityManagerFactory.setJpaProperties(hibernateProperties);
-        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
-        return entityManagerFactory;
-    }
-
-    public UserCredentialsDataSourceAdapter dataSource(String user, String password, DataSource targetDataSource) {
-        final UserCredentialsDataSourceAdapter datasource = new UserCredentialsDataSourceAdapter();
-        datasource.setCredentialsForCurrentThread(user, password);
-        datasource.setTargetDataSource(targetDataSource);
-        return datasource;
-    }
-
-    private DataSource targetDataSource(String driver, String databaseUrl) {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(driver);
-        dataSource.setUrl(databaseUrl);
         return dataSource;
     }
 
@@ -151,5 +107,47 @@ public class DbH2MultiTenantConfiguration implements ApplicationContextAware {
         jpaVendorAdapter.setGenerateDdl(true);
         jpaVendorAdapter.setShowSql(true);
         return jpaVendorAdapter;
+    }
+
+    @Override public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = (GenericApplicationContext) applicationContext;
+    }
+
+    private PlatformTransactionManager transactionManager(LocalContainerEntityManagerFactoryBean entityManagerFactory ) {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory.getObject());
+        transactionManager.setJpaDialect(new HibernateJpaDialect());
+        return transactionManager;
+    }
+
+    private LocalContainerEntityManagerFactoryBean entityManagerFactory(
+            DataSource dataSourceAdapter
+            , Properties hibernateProperties
+            , JpaVendorAdapter jpaVendorAdapter
+            , String persistenceUnitName
+    ) {
+        final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+        entityManagerFactory.setDataSource(dataSourceAdapter);
+        entityManagerFactory.setPackagesToScan("ppa.spring.domain.bean");
+        entityManagerFactory.setPersistenceUnitName(persistenceUnitName);
+        entityManagerFactory.setJpaProperties(hibernateProperties);
+        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+        return entityManagerFactory;
+    }
+
+    public static UserCredentialsDataSourceAdapter dataSource(String user, String password, DataSource targetDataSource) {
+        final UserCredentialsDataSourceAdapter datasource = new UserCredentialsDataSourceAdapter();
+        datasource.setUsername(user);
+        datasource.setPassword(password);
+        datasource.setCredentialsForCurrentThread(user, password);
+        datasource.setTargetDataSource(targetDataSource);
+        return datasource;
+    }
+
+    public static DataSource targetDataSource(String driver, String databaseUrl) {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(driver);
+        dataSource.setUrl(databaseUrl);
+        return dataSource;
     }
 }
