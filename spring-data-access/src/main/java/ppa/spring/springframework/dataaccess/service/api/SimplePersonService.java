@@ -1,7 +1,6 @@
 package ppa.spring.springframework.dataaccess.service.api;
 
 import org.springframework.transaction.annotation.Transactional;
-import ppa.spring.domain.bean.SimplePerson;
 import ppa.spring.springframework.dataaccess.exception.ServiceException;
 import ppa.spring.springframework.dataaccess.model.dto.SimplePersonDto;
 

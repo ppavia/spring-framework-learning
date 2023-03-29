@@ -1,6 +1,6 @@
 package ppa.spring.springframework.dataaccess.exception;
 
-public class TechnicalException extends Exception {
+public class TechnicalException extends RuntimeException {
 
     private final String type;
     private static final String DEFAULT_TYPE_EXCEPTION = "RuntimeException";

@@ -23,12 +23,18 @@ public class MultitenantDataSource extends AbstractRoutingDataSource {
     }
 
     public void addTargetDataSources(String tenantId) {
-        if(!targetDataSources.containsKey(tenantId)) {
-            DataSource targetDataSource = DbH2MultiTenantConfiguration.targetDataSource(driver, url.formatted(tenantId.toUpperCase()));
-            UserCredentialsDataSourceAdapter dataSource = DbH2MultiTenantConfiguration.dataSource(username, password, targetDataSource);
-            targetDataSources.put(tenantId, dataSource);
-            this.setTargetDataSources(targetDataSources);
+        targetDataSources.computeIfAbsent(tenantId, id -> {
+            String tenantUrl = url.formatted(tenantId.toUpperCase());
+            DataSource targetDataSource = DbH2MultiTenantConfiguration.targetDataSource(driver, tenantUrl);
+            UserCredentialsDataSourceAdapter dataSource = DbH2MultiTenantConfiguration.dataSource(
+                    username
+                    , password
+                    , targetDataSource
+            );
             this.setDefaultTargetDataSource(dataSource);
-        }
+            targetDataSources.put(tenantId, dataSource);
+            return tenantUrl;
+        });
+        this.setTargetDataSources(targetDataSources);
     }
 }
