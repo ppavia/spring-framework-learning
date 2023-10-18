@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ppa.spring.configuration.simpleautoconfiguration.SimpleService;
 import ppa.spring.springframework.dataaccess.exception.RestException;
 import ppa.spring.springframework.dataaccess.exception.ServiceException;
 import ppa.spring.springframework.dataaccess.model.dto.RestResponse;
@@ -19,8 +20,11 @@ import java.util.List;
 public class PersonController {
     private SimplePersonService simplePersonService;
 
-    public PersonController(SimplePersonService simplePersonService) {
+    private SimpleService simpleService;
+
+    public PersonController(SimplePersonService simplePersonService, SimpleService simpleService) {
         this.simplePersonService = simplePersonService;
+        this.simpleService = simpleService;
     }
 
     @GetMapping(value = "/{firstName}/{lastName}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -29,6 +33,7 @@ public class PersonController {
             , @PathVariable("firstName") String firstName
             , @PathVariable("lastName") String lastName
     ) throws RestException {
+        this.simpleService.helloWord();
         SimplePersonDto simplePerson = null;
         try {
             simplePerson = simplePersonService.getSimplePerson(firstName, lastName);

@@ -12,5 +12,10 @@
     <artifactId>spring-framework-beanlifecycle</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>Learning Bean Lifecycle</description>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
 </project>

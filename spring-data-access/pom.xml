@@ -50,8 +50,9 @@
         <!-- customs dependencies -->
         <!-- ********************************************************** -->
         <dependency>
-            <groupId>fr.assia.lib</groupId>
-            <artifactId>java-custom-utils</artifactId>
+            <groupId>ppa.spring.configuration</groupId>
+            <artifactId>simple-autoconfiguration-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ppa.spring</groupId>

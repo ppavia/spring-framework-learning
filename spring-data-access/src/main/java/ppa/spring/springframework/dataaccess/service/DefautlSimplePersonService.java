@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 public class DefautlSimplePersonService implements SimplePersonService {
-    private SimplePersonRepository simplePersonRepository;
+    private final SimplePersonRepository simplePersonRepository;
 
     private String tenantId;
 
@@ -24,10 +24,7 @@ public class DefautlSimplePersonService implements SimplePersonService {
     @Override public Optional<SimplePersonDto> getSimplePerson(Long id) {
 
         Optional<SimplePerson> simplePerson = simplePersonRepository.findById(id);
-        if(simplePerson.isPresent()) {
-            return Optional.of(mapSimplePerson(simplePerson.get()));
-        }
-        return Optional.empty();
+        return simplePerson.map(this::mapSimplePerson);
     }
 
     @Override public SimplePersonDto getSimplePerson(String firstName, String lastName) throws ServiceException {

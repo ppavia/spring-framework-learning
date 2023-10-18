@@ -13,6 +13,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import ppa.spring.springframework.dataaccess.exception.TechnicalException;
 import ppa.spring.springframework.dataaccess.model.multitenant.MultitenantDataSource;
+import ppa.spring.springframework.dataaccess.model.multitenant.TenantFilter;
 
 import javax.sql.DataSource;
 import java.io.File;
@@ -99,6 +100,11 @@ public class DbH2MultiTenantConfiguration {
         jpaVendorAdapter.setGenerateDdl(true);
         jpaVendorAdapter.setShowSql(true);
         return jpaVendorAdapter;
+    }
+
+    @Bean
+    public TenantFilter tenantFilter () {
+        return new TenantFilter();
     }
 
     public static UserCredentialsDataSourceAdapter dataSource(String user, String password, DataSource targetDataSource) {

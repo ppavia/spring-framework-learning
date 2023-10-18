@@ -1,31 +1,24 @@
-package ppa.spring.domain.bean;
+package ppa.spring.domain.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "SIMPLEPERSON")
-public class SimplePerson {
-
-    @Column(name = "FIRSTNAME")
+public class SimplePersonDto {
     private String firstName;
 
-    @Column(name = "LASTNAME")
     private String lastName;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
-    public SimplePerson(String firstName, String lastName) {
+    private Long id;
+
+    public SimplePersonDto(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public SimplePerson(Long id) {
+    public SimplePersonDto(String firstName, String lastName, Long id) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.id = id;
     }
 
-    public SimplePerson() {
-
+    public SimplePersonDto() {
     }
 
     public String getFirstName() {

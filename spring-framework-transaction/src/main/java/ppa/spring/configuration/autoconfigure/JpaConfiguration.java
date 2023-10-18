@@ -1,4 +1,4 @@
-package ppa.spring.configuration;
+package ppa.spring.configuration.autoconfigure;
 
 import net.ttddyy.dsproxy.listener.logging.SLF4JLogLevel;
 import net.ttddyy.dsproxy.support.ProxyDataSourceBuilder;

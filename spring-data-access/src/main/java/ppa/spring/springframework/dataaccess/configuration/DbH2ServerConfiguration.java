@@ -1,6 +1,5 @@
 package ppa.spring.springframework.dataaccess.configuration;
 
-import fr.assia.javacustomutils.string.StringUtils;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import jakarta.annotation.PostConstruct;
@@ -19,6 +18,8 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.util.Assert;
+import ppa.spring.springframework.dataaccess.model.multitenant.TenantFilter;
+import ppa.spring.utils.StringUtils;
 
 import javax.sql.DataSource;
 import java.util.Properties;

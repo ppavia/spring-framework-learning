@@ -13,6 +13,13 @@
     <name>spring-framework-di</name>
     <description>Learning Dependency Injection</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
