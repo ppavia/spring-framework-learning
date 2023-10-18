@@ -1,5 +1,6 @@
 package ppa.spring.springframework.dataaccess.configuration;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -7,9 +8,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.UserCredentialsDataSourceAdapter;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
+import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import ppa.spring.springframework.dataaccess.exception.TechnicalException;
 import ppa.spring.springframework.dataaccess.model.multitenant.MultitenantDataSource;
@@ -36,6 +41,33 @@ import java.util.Properties;
 public class DbH2MultiTenantConfiguration {
 
     private static final String TENANT_PATH = "tenants";
+
+    @Bean
+    public PlatformTransactionManager transactionManager(@Qualifier("entityManagerFactory") LocalContainerEntityManagerFactoryBean entityManagerFactory ) {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory.getObject());
+        transactionManager.setJpaDialect(new HibernateJpaDialect());
+        return transactionManager;
+    }
+
+    /**
+     * Factory de création de la sessionFactory hibernate
+     * @return
+     */
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
+            Properties hibernateProperties
+            , JpaVendorAdapter jpaVendorAdapter
+    ) {
+        final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+        MultitenantDataSource dataSource = dataSource();
+        entityManagerFactory.setDataSource(dataSource());
+        entityManagerFactory.setPackagesToScan("ppa.spring.domain.bean");
+        entityManagerFactory.setPersistenceUnitName(defaultTenant);
+        entityManagerFactory.setJpaProperties(hibernateProperties);
+        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+        return entityManagerFactory;
+    }
 
     @Bean("targetDataSources")
     public Map<Object, Object> targetDataSources () {

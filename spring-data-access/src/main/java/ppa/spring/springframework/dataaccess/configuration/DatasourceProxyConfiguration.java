@@ -6,8 +6,8 @@ import net.ttddyy.dsproxy.listener.logging.SystemOutQueryLoggingListener;
 import net.ttddyy.dsproxy.support.ProxyDataSourceBuilder;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -25,7 +25,7 @@ import java.lang.reflect.Method;
         matchIfMissing = false
 )
 public class DatasourceProxyConfiguration implements BeanPostProcessor {
-    private static final Logger LOG = LogManager.getLogger(DatasourceProxyConfiguration.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DatasourceProxyConfiguration.class);
 
     @Override
     public Object postProcessBeforeInitialization(final Object bean, final String beanName) throws BeansException {
@@ -36,7 +36,7 @@ public class DatasourceProxyConfiguration implements BeanPostProcessor {
     public Object postProcessAfterInitialization(final Object bean, final String beanName) throws BeansException {
         if (bean instanceof DataSource datasource) {
             if (LOG.isDebugEnabled()) {
-                LOG.debug("DEBUGGING DATA SOURCE : {}", () -> beanName);
+                LOG.debug("DEBUGGING DATA SOURCE : %s".formatted(beanName));
             }
             ProxyFactory factory = new ProxyFactory(datasource);
             factory.setProxyTargetClass(true);

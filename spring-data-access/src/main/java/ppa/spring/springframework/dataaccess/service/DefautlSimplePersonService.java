@@ -27,7 +27,9 @@ public class DefautlSimplePersonService implements SimplePersonService {
         return simplePerson.map(this::mapSimplePerson);
     }
 
-    @Override public SimplePersonDto getSimplePerson(String firstName, String lastName) throws ServiceException {
+    @Override
+    @Transactional
+    public SimplePersonDto getSimplePerson(String firstName, String lastName) throws ServiceException {
         SimplePerson simplePerson = simplePersonRepository.findByFirstNameAndLastName(firstName, lastName);
         if(simplePerson == null) {
             throw new ServiceException(String.format("la personne [%s,%s] n'a pas été trouvée.", firstName, lastName));
@@ -44,7 +46,17 @@ public class DefautlSimplePersonService implements SimplePersonService {
                 .toList();
     }
 
-    @Override public SimplePersonDto addSimplePerson(SimplePersonDto simplePersonDto, String tenantId) throws ServiceException {
+    @Transactional
+    @Override public List<SimplePersonDto> getPersons() throws ServiceException {
+        List<SimplePerson> simplePersons = simplePersonRepository.findAll();
+        return simplePersons.stream()
+                .map(this::mapSimplePerson)
+                .toList();
+    }
+
+    @Override
+    @Transactional
+    public SimplePersonDto addSimplePerson(SimplePersonDto simplePersonDto, String tenantId) throws ServiceException {
         SimplePerson simplePerson = simplePersonRepository.save(mapSimplePersonDto(simplePersonDto));
         return mapSimplePerson(simplePerson);
     }

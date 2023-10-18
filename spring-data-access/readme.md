@@ -1,6 +1,6 @@
 url server distant
 
-jdbc:h2:tcp://localhost//home/ppierre/Development/dbs/h2/db/TENANT1
+jdbc:h2:tcp://localhost//home/ppierre/Development/dbs/db-h2/db/TENANT1
 
 start h2 server allowing remote creation (WARNING !! not in production)  
 <code>java -cp h2*.jar org.h2.tools.Server -ifNotExists</code>

@@ -72,13 +72,26 @@ public class PersonController {
         return HttpResponseUtil.buildRestResponse(simplePerson);
     }
 
+    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<SimplePersonDto>> persons(
+            HttpServletRequest request
+    ) throws RestException {
+        List<SimplePersonDto> simplePersons = null;
+        try {
+            simplePersons = simplePersonService.getPersons();
+        } catch (ServiceException e) {
+            throw new RestException(e.getMessage(), HttpStatus.NOT_FOUND, e);
+        }
+        return HttpResponseUtil.buildRestResponse(simplePersons);
+    }
+
     @GetMapping("/400")
     public ResponseEntity<Void> noPerson() throws RestException {
         throw new RestException("a bad request", HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping (value = "/"
-            , consumes = MediaType.APPLICATION_JSON_VALUE
+    @PutMapping (
+            consumes = MediaType.APPLICATION_JSON_VALUE
             , produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestResponse<SimplePersonDto>> createNewPerson(
             HttpServletRequest request

@@ -19,8 +19,10 @@ public class TenantFilter implements Filter {
             , FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         String tenantName = req.getHeader("X-TenantID");
-        dataSource.addTargetDataSources(tenantName);
-        TenantContext.setCurrentTenant(tenantName);
+        if(tenantName != null) {
+            dataSource.addTargetDataSources(tenantName);
+            TenantContext.setCurrentTenant(tenantName);
+        }
 
         try {
             chain.doFilter(request, response);

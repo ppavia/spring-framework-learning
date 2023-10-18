@@ -15,5 +15,8 @@ public interface SimplePersonService {
 
     List<SimplePersonDto> getSimplePersons(String firstName) throws ServiceException;
 
+    @Transactional
+    List<SimplePersonDto> getPersons() throws ServiceException;
+
     @Transactional SimplePersonDto addSimplePerson(SimplePersonDto simplePersonDto, String tenantId) throws ServiceException;
 }
