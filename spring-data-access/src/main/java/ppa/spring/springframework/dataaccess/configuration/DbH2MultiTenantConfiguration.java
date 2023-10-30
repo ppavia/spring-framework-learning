@@ -56,12 +56,12 @@ public class DbH2MultiTenantConfiguration {
      */
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
-            Properties hibernateProperties
+            MultitenantDataSource dataSource
+            , Properties hibernateProperties
             , JpaVendorAdapter jpaVendorAdapter
     ) {
         final LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-        MultitenantDataSource dataSource = dataSource();
-        entityManagerFactory.setDataSource(dataSource());
+        entityManagerFactory.setDataSource(dataSource);
         entityManagerFactory.setPackagesToScan("ppa.spring.domain.bean");
         entityManagerFactory.setPersistenceUnitName(defaultTenant);
         entityManagerFactory.setJpaProperties(hibernateProperties);
