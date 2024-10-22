@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ia
+  config:
+    import:
+      - file:../conf/ia/api-configuration.properties
