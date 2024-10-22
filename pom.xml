@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.3</version>
+        <version>3.3.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -28,6 +28,7 @@
         <module>spring-framework-controlleradvice</module>
         <module>spring-data-access</module>
         <module>spring-pagination</module>
+        <module>ia</module>
     </modules>
 
     <properties>
@@ -36,7 +37,7 @@
         <learning-tools.version>1.0-SNAPSHOT</learning-tools.version>
         <net.ttddyy.version>1.8.1</net.ttddyy.version>
         <snakeyaml.version>2.0</snakeyaml.version>
-        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+        <org.mapstruct.version>1.6.0</org.mapstruct.version>
         <mysql.version>8.0.33</mysql.version>
     </properties>
 
