@@ -4,10 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>ppa.lab</groupId>
+        <artifactId>ppa-libs-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>ppa.spring</groupId>
@@ -17,7 +16,6 @@
 
 
     <modules>
-        <module>learning-tools</module>
         <module>simple-autoconfiguration-starter</module>
         <module>spring-framework-di</module>
         <module>spring-framework-profile</module>
@@ -32,12 +30,6 @@
     </modules>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-framework-learning.version>0.0.1-SNAPSHOT</spring-framework-learning.version>
-        <learning-tools.version>1.0-SNAPSHOT</learning-tools.version>
-        <net.ttddyy.version>1.8.1</net.ttddyy.version>
-        <snakeyaml.version>2.0</snakeyaml.version>
-        <org.mapstruct.version>1.6.0</org.mapstruct.version>
         <mysql.version>8.0.33</mysql.version>
     </properties>
 
@@ -45,7 +37,6 @@
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
-            <version>${snakeyaml.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -53,29 +44,22 @@
             <dependency>
                 <groupId>net.ttddyy</groupId>
                 <artifactId>datasource-proxy</artifactId>
-                <version>${net.ttddyy.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
-                <version>${org.mapstruct.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
-                <version>${org.mapstruct.version}</version>
             </dependency>
             <dependency>
                 <groupId>ppa.spring</groupId>
                 <artifactId>spring-framework-di</artifactId>
-                <version>${spring-framework-learning.version}</version>
             </dependency>
             <dependency>
-                <groupId>ppa.spring</groupId>
-                <artifactId>learning-tools</artifactId>
-                <version>${learning-tools.version}</version>
+                <groupId>ppa.lab</groupId>
+                <artifactId>model-tools</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>

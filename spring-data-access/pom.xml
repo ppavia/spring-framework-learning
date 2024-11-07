@@ -13,7 +13,6 @@
 
     <properties>
         <java-custom-utils.version>1.0.0</java-custom-utils.version>
-        <learning-tools.version>1.0-SNAPSHOT</learning-tools.version>
     </properties>
 
     <dependencies>
@@ -55,8 +54,8 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ppa.spring</groupId>
-            <artifactId>learning-tools</artifactId>
+            <groupId>ppa.lab</groupId>
+            <artifactId>model-tools</artifactId>
         </dependency>
     </dependencies>
 
